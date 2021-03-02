@@ -4,19 +4,20 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessageModule } from '../shared/message/message.module';
-
+import { NewUserComponent } from './new-user/new-user.component';
 
 @NgModule({
-  declarations: [HomeComponent, LoginComponent],
+  declarations: [HomeComponent, LoginComponent, NewUserComponent],
   imports: [
     CommonModule,
     FormsModule,
     HomeRoutingModule,
+    ReactiveFormsModule,
 
-    MessageModule
+    MessageModule,
   ],
-  exports: [HomeComponent]
+  exports: [HomeComponent],
 })
-export class HomeModule { }
+export class HomeModule {}
